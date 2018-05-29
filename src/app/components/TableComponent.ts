@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { TableService } from '../services/table.service';
 
 @Component({
-    selector: 'app-table',
+    selector: 'table-cont',
     templateUrl: './TableComponent.html',
     styleUrls: ['./TableComponent.css']
 })
