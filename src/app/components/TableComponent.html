@@ -1,0 +1,14 @@
+<div class="component-style table-component">
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" *ngFor="let column of columns">{{column}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="component-style table-row-component" *ngFor="let i of items | async" app-table-row [item]="i" [columns]="columns"></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
