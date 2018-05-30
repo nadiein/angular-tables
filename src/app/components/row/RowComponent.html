@@ -1,0 +1,10 @@
+<div class="column" (click)="toggle.emit()">
+    <div>
+        <div *ngFor="let column of columns">
+            {{item[column]}}
+        </div>
+    </div>
+    <div class="collapse-cont" *ngIf="opened">
+        <ng-content></ng-content>
+    </div>
+</div>

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { TableService } from '../services/table.service';
+import { TableService } from '../../services/table.service';
 
 @Component({
     selector: 'table-cont',
     templateUrl: './TableComponent.html',
-    styleUrls: ['./TableComponent.css']
+    styleUrls: ['./TableComponent.scss']
 })
 
 export class TableComponent implements OnInit {

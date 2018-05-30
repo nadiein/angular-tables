@@ -1,0 +1,23 @@
+<div class="table-cont">
+        <div class="table">
+            <div class="table-header">
+                <div>
+                    <div scope="col" *ngFor="let column of columns">{{column}}</div>
+                </div>
+            </div>
+            <div class="table-body">
+                <accordion>
+                    <div 
+                        class="table-row-cont" 
+                        *ngFor="let i of items | async" 
+                        table-row-cont 
+                        [item]="i" 
+                        [columns]="columns"
+                        [opened]="i.opened"
+                        (toggle)="i.opened = !i.opened">
+                        bla
+                    </div>
+                </accordion>
+            </div>
+        </div>
+</div>
