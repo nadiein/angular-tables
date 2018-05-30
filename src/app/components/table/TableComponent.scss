@@ -1,7 +1,29 @@
 .table-header {
+    border-bottom: 1px solid #000;
 
     & > * {
         display: flex;
         justify-content: space-between;
-    } 
+    }
+
+    .column {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+.table-body {
+
+    .table-row-cont {
+        border-bottom: 1px solid #e3e5e8;
+        transition: all .15s ease;
+
+        &:hover {
+            background: #e3e5e8;
+
+            .collapse-cont {
+                background: #aaacaf;
+            }
+        }
+    }
 }

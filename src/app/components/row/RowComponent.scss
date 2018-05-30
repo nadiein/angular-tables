@@ -1,6 +1,7 @@
 .column {
     display: flex;
     flex-direction: column;
+    padding: 8px 15px;
 
     & > * {
         display: flex;
