@@ -11,8 +11,10 @@
     }
 
     .column {
+        min-width: 25%;
         font-size: 18px;
         font-weight: 700;
+        text-align: center;
     }
 }
 
@@ -22,8 +24,12 @@
         border-bottom: 1px solid #e3e5e8;
         transition: all .15s ease;
 
-        &:hover {
+        &:nth-child(odd) {
             background: #e3e5e8;
+        }
+
+        &:hover {
+            background: rgba(#e3e5e8, .5);
 
             .collapse-cont {
                 background: #aaacaf;

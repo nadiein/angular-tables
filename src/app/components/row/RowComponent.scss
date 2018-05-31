@@ -1,14 +1,21 @@
-.column {
+.row {
     display: flex;
     flex-direction: column;
     padding: 8px 15px;
 
-    & > * {
+    & > *,
+    .collapse-cont,
+    .column {
         display: flex;
+    }
+
+    & > * {
         justify-content: space-between;
     }
 
-    .collapse-cont {
-        display: flex;
+    .column {
+        min-width: 25%;
+        align-items: center;
+        justify-content: center;
     }
 }

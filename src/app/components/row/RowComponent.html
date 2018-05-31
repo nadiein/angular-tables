@@ -1,6 +1,6 @@
-<div class="column" (click)="toggle.emit()">
-    <div>
-        <div *ngFor="let column of columns">
+<div class="row">
+    <div (click)="toggle.emit()">
+        <div class="column" *ngFor="let column of columns">
             {{item[column]}}
         </div>
     </div>

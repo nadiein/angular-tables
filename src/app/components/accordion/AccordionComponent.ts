@@ -12,18 +12,18 @@ import { TableComponent } from './../table/TableComponent';
 })
 
 export class AccordionComponent  implements AfterContentInit {
-    @ContentChildren(TableComponent) panels: QueryList<TableComponent>;
+    @ContentChildren(TableComponent) items: QueryList<TableComponent>;
  
     ngAfterContentInit() {
-        this.panels.toArray().forEach((panel) => {
-            panel.toggle.subscribe(() => {
-                this.openPanel(panel);
+        this.items.toArray().forEach((item) => {
+            item.toggle.subscribe(() => {
+                this.openPanel(item);
             });
         });
     }
  
-    openPanel(panel: TableComponent) {
-        this.panels.toArray().forEach(el => el.opened = false);
-        panel.opened = true;
+    openPanel(item: TableComponent) {
+        this.items.toArray().forEach(el => el.opened = false);
+        item.opened = true;
     }
 }
