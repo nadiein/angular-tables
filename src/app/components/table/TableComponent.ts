@@ -12,6 +12,8 @@ export class TableComponent implements OnInit {
 
     items: Observable<any[]>;
     columns: string[];
+    opened: boolean = false;
+    toggle: Observable<any[]>;
 
     constructor(private atService: TableService) { }
 
