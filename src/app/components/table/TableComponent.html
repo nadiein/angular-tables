@@ -9,12 +9,12 @@
                 <accordion>
                     <div 
                         class="table-row-cont" 
-                        *ngFor="let i of items | async" 
+                        *ngFor="let i of items | async; let num = index;" 
                         table-row-cont 
                         [item]="i" 
                         [columns]="columns"
                         [opened]="i.opened"
-                        (toggle)="i.opened = !i.opened">
+                        (click)="openPanel(items, num)">
                         <details-cont class="details-cont"></details-cont>
                     </div>
                 </accordion>

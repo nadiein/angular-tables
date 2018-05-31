@@ -21,4 +21,14 @@ export class TableComponent implements OnInit {
         this.columns = this.atService.getColumns();
         this.items = this.atService.getItems();
     }
+
+    private openPanel = (items, num) => {
+        let current = items.source.value[num];
+
+        for (let i = 0; i < items.source.value.length; i++){
+            items.source.value[i].opened = false;
+        }
+        
+        current.opened = true;
+    }
 }

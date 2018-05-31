@@ -1,8 +1,7 @@
 import { 
     Component, 
     ContentChildren, 
-    QueryList, 
-    AfterContentInit 
+    QueryList 
 } from '@angular/core';
 import { TableComponent } from './../table/TableComponent';
  
@@ -11,19 +10,6 @@ import { TableComponent } from './../table/TableComponent';
     template: '<ng-content></ng-content>'
 })
 
-export class AccordionComponent  implements AfterContentInit {
+export class AccordionComponent {
     @ContentChildren(TableComponent) items: QueryList<TableComponent>;
- 
-    ngAfterContentInit() {
-        this.items.toArray().forEach((item) => {
-            item.toggle.subscribe(() => {
-                this.openPanel(item);
-            });
-        });
-    }
- 
-    openPanel(item: TableComponent) {
-        this.items.toArray().forEach(el => el.opened = false);
-        item.opened = true;
-    }
 }
